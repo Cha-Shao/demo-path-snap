@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.acrylic-card {
+  @apply bg-white/10 border-2 border-white/20 backdrop-blur-md
+}
+
+.bg {
+  @apply bg-light dark:bg-dark
+}
+.pbg {
+  @apply bg-lightBackground dark:bg-darkBackground
+}
