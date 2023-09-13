@@ -15,13 +15,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-      <Providers>
-        <body style={{
-          height: '100vh'
-        }}>
+      <body style={{
+        height: '100vh'
+      }}>
+        <Providers>
           {children}
-        </body>
-      </Providers>
+        </Providers>
+      </body>
     </html>
   )
 }
