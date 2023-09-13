@@ -33,7 +33,7 @@ const PostInfo = (props: Post
       )
     } >
       <div className="flex gap-2">
-        <div className="acrylic-card max-w-[70vw] h-8 flex items-center gap-1 rounded-lg px-2">
+        <div className="acrylic-card h-8 flex items-center gap-1 rounded-lg px-2">
           <PinIcon />
           <span className="text-white line-clamp-1">{location}</span>
         </div>

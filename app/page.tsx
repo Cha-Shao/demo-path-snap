@@ -11,9 +11,9 @@ export default async function Home() {
   const posts = await getPosts()
 
   return (
-    <main>
+    <main className='flex flex-col'>
       <Header />
-      <PostFlow defaultPosts={posts} />
+      <PostFlow defaultPosts={[...posts, ...posts]} />
       <Footer />
     </main>
   )

@@ -3,7 +3,6 @@
 import classNames from "classnames"
 import { usePathname } from 'next/navigation'
 import Link from "next/link"
-import { BASE_PATH } from "@/config"
 
 const routes: {
   label: string
@@ -31,12 +30,12 @@ const Footer = () => {
   const pathname = usePathname()
 
   return (
-    <div className="fixed bottom-0 w-screen h-16 grid grid-cols-4 items-center bg border-t border-white">
+    <div className="fixed bottom-0 w-screen h-16 grid grid-cols-4 items-center bg-light border-t border-white">
       {routes.map((route, i) => (
         <Link key={i} href={route.path}>
           <div className={classNames(
             'text-center',
-            pathname.startsWith(route.path.split('/')[1]) && 'text-primary'
+            pathname.startsWith(route.path) && 'text-primary'
           )}>
             <span className={classNames(route.icon, 'text-3xl -mb-1')} />
             <p className="text-xs">{route.label}</p>

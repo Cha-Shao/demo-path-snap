@@ -10,13 +10,13 @@ const getUserPosition = (): [number, number] | null => {
       err => {
         switch (err.code) {
           case err.PERMISSION_DENIED:
-            throw new Error("请打开定位")
+            console.error("请打开定位")
           case err.POSITION_UNAVAILABLE:
-            throw new Error("定位失败，请尝试刷新")
+            console.error("定位失败，请尝试刷新")
           case err.TIMEOUT:
-            throw new Error("请求超时，请尝试刷新")
+            console.error("请求超时，请尝试刷新")
           default:
-            throw new Error("定位时发生了未知错误")
+            console.error("定位时发生了未知错误")
         }
       })
     return result
